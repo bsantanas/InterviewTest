@@ -52,6 +52,14 @@
             Album *album = [Album albumWithData:result];
             [albums addObject:album];
         }
+        for (NSDictionary *result in results) {
+            Album *album = [Album albumWithData:result];
+            [albums addObject:album];
+        }
+        for (NSDictionary *result in results) {
+            Album *album = [Album albumWithData:result];
+            [albums addObject:album];
+        }
 
     }
     
