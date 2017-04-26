@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		6499D1D61EB042DB00509D40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6499D1D51EB042DB00509D40 /* main.m */; };
 		6499D1D91EB042DB00509D40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6499D1D81EB042DB00509D40 /* AppDelegate.m */; };
-		6499D1DC1EB042DB00509D40 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6499D1DB1EB042DB00509D40 /* ViewController.m */; };
 		6499D1DF1EB042DB00509D40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6499D1DD1EB042DB00509D40 /* Main.storyboard */; };
 		6499D1E11EB042DB00509D40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6499D1E01EB042DB00509D40 /* Assets.xcassets */; };
 		6499D1E41EB042DB00509D40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6499D1E21EB042DB00509D40 /* LaunchScreen.storyboard */; };
+		6499D1ED1EB044FC00509D40 /* AlbumsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6499D1EC1EB044FC00509D40 /* AlbumsTableViewController.m */; };
+		6499D1F21EB0453E00509D40 /* ArtistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6499D1F11EB0453E00509D40 /* ArtistTableViewCell.m */; };
+		6499D1F51EB0455300509D40 /* AlbumDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6499D1F41EB0455300509D40 /* AlbumDetailViewController.m */; };
+		6499D1FC1EB047C000509D40 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 6499D1FB1EB047C000509D40 /* Album.m */; };
+		6499D1FF1EB04A3E00509D40 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 6499D1FE1EB04A3E00509D40 /* Model.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +24,20 @@
 		6499D1D51EB042DB00509D40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6499D1D71EB042DB00509D40 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6499D1D81EB042DB00509D40 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6499D1DA1EB042DB00509D40 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6499D1DB1EB042DB00509D40 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6499D1DE1EB042DB00509D40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6499D1E01EB042DB00509D40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6499D1E31EB042DB00509D40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6499D1E51EB042DB00509D40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6499D1EB1EB044FC00509D40 /* AlbumsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlbumsTableViewController.h; path = ViewControllers/AlbumsTableViewController.h; sourceTree = "<group>"; };
+		6499D1EC1EB044FC00509D40 /* AlbumsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlbumsTableViewController.m; path = ViewControllers/AlbumsTableViewController.m; sourceTree = "<group>"; };
+		6499D1F01EB0453E00509D40 /* ArtistTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistTableViewCell.h; sourceTree = "<group>"; };
+		6499D1F11EB0453E00509D40 /* ArtistTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistTableViewCell.m; sourceTree = "<group>"; };
+		6499D1F31EB0455300509D40 /* AlbumDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumDetailViewController.h; sourceTree = "<group>"; };
+		6499D1F41EB0455300509D40 /* AlbumDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumDetailViewController.m; sourceTree = "<group>"; };
+		6499D1FA1EB047C000509D40 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
+		6499D1FB1EB047C000509D40 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
+		6499D1FD1EB04A3E00509D40 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		6499D1FE1EB04A3E00509D40 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +72,10 @@
 			children = (
 				6499D1D71EB042DB00509D40 /* AppDelegate.h */,
 				6499D1D81EB042DB00509D40 /* AppDelegate.m */,
-				6499D1DA1EB042DB00509D40 /* ViewController.h */,
-				6499D1DB1EB042DB00509D40 /* ViewController.m */,
-				6499D1DD1EB042DB00509D40 /* Main.storyboard */,
+				6499D1F91EB0479D00509D40 /* Model */,
+				6499D1EE1EB0450B00509D40 /* View Controllers */,
+				6499D1EF1EB0451700509D40 /* Views */,
 				6499D1E01EB042DB00509D40 /* Assets.xcassets */,
-				6499D1E21EB042DB00509D40 /* LaunchScreen.storyboard */,
 				6499D1E51EB042DB00509D40 /* Info.plist */,
 				6499D1D41EB042DB00509D40 /* Supporting Files */,
 			);
@@ -77,6 +88,39 @@
 				6499D1D51EB042DB00509D40 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6499D1EE1EB0450B00509D40 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6499D1EB1EB044FC00509D40 /* AlbumsTableViewController.h */,
+				6499D1EC1EB044FC00509D40 /* AlbumsTableViewController.m */,
+				6499D1F31EB0455300509D40 /* AlbumDetailViewController.h */,
+				6499D1F41EB0455300509D40 /* AlbumDetailViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		6499D1EF1EB0451700509D40 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6499D1DD1EB042DB00509D40 /* Main.storyboard */,
+				6499D1E21EB042DB00509D40 /* LaunchScreen.storyboard */,
+				6499D1F01EB0453E00509D40 /* ArtistTableViewCell.h */,
+				6499D1F11EB0453E00509D40 /* ArtistTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		6499D1F91EB0479D00509D40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6499D1FA1EB047C000509D40 /* Album.h */,
+				6499D1FB1EB047C000509D40 /* Album.m */,
+				6499D1FD1EB04A3E00509D40 /* Model.h */,
+				6499D1FE1EB04A3E00509D40 /* Model.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +195,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6499D1DC1EB042DB00509D40 /* ViewController.m in Sources */,
 				6499D1D91EB042DB00509D40 /* AppDelegate.m in Sources */,
+				6499D1ED1EB044FC00509D40 /* AlbumsTableViewController.m in Sources */,
+				6499D1F21EB0453E00509D40 /* ArtistTableViewCell.m in Sources */,
+				6499D1FC1EB047C000509D40 /* Album.m in Sources */,
+				6499D1FF1EB04A3E00509D40 /* Model.m in Sources */,
 				6499D1D61EB042DB00509D40 /* main.m in Sources */,
+				6499D1F51EB0455300509D40 /* AlbumDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

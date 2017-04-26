@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ArtistTableViewCell.h
 //  ThinkriteTest
 //
 //  Created by Bernardo Santana on 4/25/17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ArtistTableViewCell : UITableViewCell
 
 @end
-
