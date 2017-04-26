@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Album.h"
 
-@interface AlbumDetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface AlbumDetailViewController : UIViewController
 
 @property (strong, nonatomic) Album *album;
 @property (strong, nonatomic) UIImage *albumCoverImage;

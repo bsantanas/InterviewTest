@@ -17,7 +17,6 @@
 		6499D1F51EB0455300509D40 /* AlbumDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6499D1F41EB0455300509D40 /* AlbumDetailViewController.m */; };
 		6499D1FC1EB047C000509D40 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 6499D1FB1EB047C000509D40 /* Album.m */; };
 		6499D1FF1EB04A3E00509D40 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 6499D1FE1EB04A3E00509D40 /* Model.m */; };
-		6499D2021EB0581E00509D40 /* AlbumDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6499D2011EB0581E00509D40 /* AlbumDetailTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,8 +38,6 @@
 		6499D1FB1EB047C000509D40 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 		6499D1FD1EB04A3E00509D40 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		6499D1FE1EB04A3E00509D40 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
-		6499D2001EB0581E00509D40 /* AlbumDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumDetailTableViewCell.h; sourceTree = "<group>"; };
-		6499D2011EB0581E00509D40 /* AlbumDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumDetailTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +108,6 @@
 				6499D1E21EB042DB00509D40 /* LaunchScreen.storyboard */,
 				6499D1F01EB0453E00509D40 /* ArtistTableViewCell.h */,
 				6499D1F11EB0453E00509D40 /* ArtistTableViewCell.m */,
-				6499D2001EB0581E00509D40 /* AlbumDetailTableViewCell.h */,
-				6499D2011EB0581E00509D40 /* AlbumDetailTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -204,7 +199,6 @@
 				6499D1ED1EB044FC00509D40 /* AlbumsTableViewController.m in Sources */,
 				6499D1F21EB0453E00509D40 /* ArtistTableViewCell.m in Sources */,
 				6499D1FC1EB047C000509D40 /* Album.m in Sources */,
-				6499D2021EB0581E00509D40 /* AlbumDetailTableViewCell.m in Sources */,
 				6499D1FF1EB04A3E00509D40 /* Model.m in Sources */,
 				6499D1D61EB042DB00509D40 /* main.m in Sources */,
 				6499D1F51EB0455300509D40 /* AlbumDetailViewController.m in Sources */,
