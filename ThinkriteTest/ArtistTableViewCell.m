@@ -7,11 +7,9 @@
 //
 
 #import "ArtistTableViewCell.h"
-#import "Album.h"
 
 @interface ArtistTableViewCell()
 
-@property (weak, nonatomic) IBOutlet UIImageView *artistImage;
 @property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *albumNameLabel;
 

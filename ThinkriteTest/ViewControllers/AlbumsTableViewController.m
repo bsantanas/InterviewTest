@@ -13,8 +13,9 @@
 
 @interface AlbumsTableViewController ()
 
-@property (strong, nonatomic) NSArray<UIImage *> *imageCache;
+@property (strong, nonatomic) NSMutableDictionary *imageCache;
 @property (strong, nonatomic) Album *selectedAlbum;
+@property (strong, nonatomic) UIImage *selectedImage;
 
 @end
 
@@ -22,6 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.imageCache = [[NSMutableDictionary alloc] init];
     
     [[Model shared] loadAlbumsWithCompletion:^(BOOL success) {
         if(success) {
@@ -45,13 +48,44 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ArtistTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableToDetail" forIndexPath:indexPath];
     
-    // Configure the cell...
+    if([[Model shared].albums objectAtIndex:indexPath.row]) {
+        Album *album = [Model shared].albums[indexPath.row];
+        [cell configureWithAlbum:album];
+        
+        UIImage *image = [self.imageCache objectForKey:album.imageUrl];
+        if (image) {
+            cell.artistImage.image = image;
+        } else {
+            [self downloadImageWithURL:album.imageUrl AndSetInCell:cell];
+        }
+    }
+    
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    if([[Model shared].albums objectAtIndex:indexPath.row]) {
+        Album *album = [Model shared].albums[indexPath.row];
+        self.selectedImage = self.imageCache[album.imageUrl];
+        self.selectedAlbum = album;
+    }
+}
+
+-(void)downloadImageWithURL:(NSString *)url AndSetInCell:(ArtistTableViewCell *) cell {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+                   ^{
+                       NSURL *imageURL = [NSURL URLWithString:url];
+                       NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+                       UIImage *image = [UIImage imageWithData:imageData];
+                       self.imageCache[url] = image;
+                       
+                       dispatch_sync(dispatch_get_main_queue(), ^{
+                           cell.artistImage.image = image;
+                           
+                       });
+                   });
+
 }
 
 #pragma mark - Navigation
@@ -61,6 +95,7 @@
     if([segue.identifier isEqualToString:@"TableToDetail"]) {
         AlbumDetailViewController *avc = segue.destinationViewController;
         avc.album = self.selectedAlbum;
+        avc.albumCoverImage = self.selectedImage;
     }
 }
 

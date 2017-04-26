@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Album.h"
 
 @interface ArtistTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UIImageView *artistImage;
+
+-(void)configureWithAlbum:(Album *)album;
 
 @end
