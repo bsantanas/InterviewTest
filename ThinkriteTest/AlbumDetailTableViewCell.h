@@ -10,6 +10,6 @@
 
 @interface AlbumDetailTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
 @end

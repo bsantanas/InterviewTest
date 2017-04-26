@@ -24,11 +24,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"Albums";
+    
     self.imageCache = [[NSMutableDictionary alloc] init];
+    
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 100;
     
     [[Model shared] loadAlbumsWithCompletion:^(BOOL success) {
         if(success) {
-            [self.tableView reloadData];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
         }
     }];
 }
@@ -46,7 +53,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ArtistTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableToDetail" forIndexPath:indexPath];
+    ArtistTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AlbumCell" forIndexPath:indexPath];
     
     if([[Model shared].albums objectAtIndex:indexPath.row]) {
         Album *album = [Model shared].albums[indexPath.row];
@@ -69,6 +76,7 @@
         Album *album = [Model shared].albums[indexPath.row];
         self.selectedImage = self.imageCache[album.imageUrl];
         self.selectedAlbum = album;
+        [self performSegueWithIdentifier:@"TableToDetail" sender:self];
     }
 }
 
@@ -78,7 +86,7 @@
                        NSURL *imageURL = [NSURL URLWithString:url];
                        NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
                        UIImage *image = [UIImage imageWithData:imageData];
-                       self.imageCache[url] = image;
+                       [self.imageCache setObject:image forKey:url];
                        
                        dispatch_sync(dispatch_get_main_queue(), ^{
                            cell.artistImage.image = image;

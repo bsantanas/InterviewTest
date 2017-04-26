@@ -26,7 +26,7 @@
     NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession]
                                           dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                                               if(data) {
-                                                  
+                                                  self.albums = [self parseAlbumsFromData:data];
                                                   completion(YES);
                                               } else {
                                                   completion(NO);
@@ -42,15 +42,17 @@
     NSError *error = nil;
     id object = [NSJSONSerialization
                  JSONObjectWithData:data
-                 options:0
+                 options:NSUTF8StringEncoding
                  error:&error];
     
-    if(!error && [object isKindOfClass:[NSArray class]]) {
-        NSArray *results = object;
+    if(!error ) {
+        NSDictionary *dict = object;
+        NSArray *results = dict[@"Albums"];
         for (NSDictionary *result in results) {
             Album *album = [Album albumWithData:result];
             [albums addObject:album];
         }
+
     }
     
     return [[NSArray alloc] initWithArray:albums];
