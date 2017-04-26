@@ -98,14 +98,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQ8-YN-rgd">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="376.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="386"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ri-86-hCQ">
-                                                <rect key="frame" x="8" y="279" width="359" height="32.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="id1-tT-jmd">
                                                 <rect key="frame" x="60" y="15" width="255" height="255"/>
                                                 <constraints>
@@ -113,13 +107,19 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JND-yk-F73">
-                                                <rect key="frame" x="16" y="348" width="343" height="20.5"/>
+                                                <rect key="frame" x="16" y="353.5" width="343" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMZ-jH-ugi">
+                                                <rect key="frame" x="16" y="285" width="343" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdT-Qt-i4i">
-                                                <rect key="frame" x="8" y="319" width="359" height="21"/>
+                                                <rect key="frame" x="8" y="320.5" width="359" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -128,19 +128,20 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="id1-tT-jmd" firstAttribute="leading" secondItem="rQ8-YN-rgd" secondAttribute="leading" constant="60" id="3Lg-LF-ajd"/>
-                                            <constraint firstAttribute="bottom" secondItem="JND-yk-F73" secondAttribute="bottom" constant="8" id="5u9-wO-ear"/>
+                                            <constraint firstAttribute="bottom" secondItem="JND-yk-F73" secondAttribute="bottom" constant="12" id="5u9-wO-ear"/>
                                             <constraint firstAttribute="trailing" secondItem="JND-yk-F73" secondAttribute="trailing" constant="16" id="6CY-x1-ND7"/>
                                             <constraint firstItem="id1-tT-jmd" firstAttribute="trailing" secondItem="rQ8-YN-rgd" secondAttribute="trailing" constant="-60" id="8If-Ki-muc"/>
+                                            <constraint firstItem="ZMZ-jH-ugi" firstAttribute="leading" secondItem="rQ8-YN-rgd" secondAttribute="leading" constant="16" id="Jqj-pa-LIZ"/>
+                                            <constraint firstItem="ZMZ-jH-ugi" firstAttribute="top" secondItem="id1-tT-jmd" secondAttribute="bottom" constant="15" id="Ki8-r5-DlH"/>
                                             <constraint firstItem="IdT-Qt-i4i" firstAttribute="leading" secondItem="rQ8-YN-rgd" secondAttribute="leading" constant="8" id="Pi9-HL-ysh"/>
+                                            <constraint firstItem="IdT-Qt-i4i" firstAttribute="top" secondItem="ZMZ-jH-ugi" secondAttribute="bottom" constant="3" id="QWy-Um-aEM"/>
                                             <constraint firstItem="id1-tT-jmd" firstAttribute="top" secondItem="rQ8-YN-rgd" secondAttribute="top" constant="15" id="Qkd-qz-Cvi"/>
                                             <constraint firstItem="id1-tT-jmd" firstAttribute="width" secondItem="id1-tT-jmd" secondAttribute="height" multiplier="1:1" id="UAF-Vy-nsu"/>
-                                            <constraint firstAttribute="trailing" secondItem="6Ri-86-hCQ" secondAttribute="trailing" constant="8" id="UEr-ds-L9b"/>
                                             <constraint firstAttribute="trailing" secondItem="IdT-Qt-i4i" secondAttribute="trailing" constant="8" id="VsB-pD-UWs"/>
-                                            <constraint firstItem="6Ri-86-hCQ" firstAttribute="leading" secondItem="rQ8-YN-rgd" secondAttribute="leading" constant="8" id="aPY-q5-5lQ"/>
-                                            <constraint firstItem="IdT-Qt-i4i" firstAttribute="top" secondItem="6Ri-86-hCQ" secondAttribute="bottom" constant="7.5" id="euo-8C-kgq"/>
+                                            <constraint firstItem="IdT-Qt-i4i" firstAttribute="top" secondItem="ZMZ-jH-ugi" secondAttribute="bottom" constant="3" id="ZYb-Ym-lff"/>
                                             <constraint firstItem="JND-yk-F73" firstAttribute="leading" secondItem="rQ8-YN-rgd" secondAttribute="leading" constant="16" id="fUt-bb-ctY"/>
-                                            <constraint firstItem="6Ri-86-hCQ" firstAttribute="top" secondItem="id1-tT-jmd" secondAttribute="bottom" constant="9" id="lhM-F8-3V0"/>
-                                            <constraint firstItem="JND-yk-F73" firstAttribute="top" secondItem="IdT-Qt-i4i" secondAttribute="bottom" constant="8" id="xNd-FY-yTS"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZMZ-jH-ugi" secondAttribute="trailing" constant="16" id="oji-hL-FU8"/>
+                                            <constraint firstItem="JND-yk-F73" firstAttribute="top" secondItem="IdT-Qt-i4i" secondAttribute="bottom" constant="12" id="xNd-FY-yTS"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -163,7 +164,7 @@
                     </view>
                     <connections>
                         <outlet property="albumCover" destination="id1-tT-jmd" id="xea-hX-ygf"/>
-                        <outlet property="artistLabel" destination="6Ri-86-hCQ" id="uuh-Qq-Hig"/>
+                        <outlet property="artistLabel" destination="ZMZ-jH-ugi" id="95F-9u-Fg9"/>
                         <outlet property="descriptionLabel" destination="JND-yk-F73" id="a4Y-HI-FTF"/>
                         <outlet property="designerLabel" destination="IdT-Qt-i4i" id="EsW-de-Zqw"/>
                     </connections>

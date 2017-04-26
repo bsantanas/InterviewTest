@@ -77,7 +77,8 @@
                        NSURL *imageURL = [NSURL URLWithString:url];
                        NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
                        UIImage *image = [UIImage imageWithData:imageData];
-                       [self.imageCache setObject:image forKey:url];
+                       if (![self.imageCache objectForKey:url])
+                           [self.imageCache setObject:image forKey:url];
                        
                        dispatch_sync(dispatch_get_main_queue(), ^{
                            ArtistTableViewCell *updateCell = (id)[self.tableView cellForRowAtIndexPath:indexPath];
