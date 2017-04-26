@@ -63,12 +63,30 @@
         if (image) {
             cell.artistImage.image = image;
         } else {
-            [self downloadImageWithURL:album.imageUrl AndSetInCell:cell];
+            [self downloadImageWithURL:album.imageUrl AndSetAt:indexPath];
         }
     }
     
     
     return cell;
+}
+
+-(void)downloadImageWithURL:(NSString *)url AndSetAt:(NSIndexPath *) indexPath {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+                   ^{
+                       NSURL *imageURL = [NSURL URLWithString:url];
+                       NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+                       UIImage *image = [UIImage imageWithData:imageData];
+                       [self.imageCache setObject:image forKey:url];
+                       
+                       dispatch_sync(dispatch_get_main_queue(), ^{
+                           ArtistTableViewCell *updateCell = (id)[self.tableView cellForRowAtIndexPath:indexPath];
+                           if (updateCell)
+                               updateCell.artistImage.image = image;
+                           
+                       });
+                   });
+
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -78,22 +96,6 @@
         self.selectedAlbum = album;
         [self performSegueWithIdentifier:@"TableToDetail" sender:self];
     }
-}
-
--(void)downloadImageWithURL:(NSString *)url AndSetInCell:(ArtistTableViewCell *) cell {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
-                   ^{
-                       NSURL *imageURL = [NSURL URLWithString:url];
-                       NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-                       UIImage *image = [UIImage imageWithData:imageData];
-                       [self.imageCache setObject:image forKey:url];
-                       
-                       dispatch_sync(dispatch_get_main_queue(), ^{
-                           cell.artistImage.image = image;
-                           
-                       });
-                   });
-
 }
 
 #pragma mark - Navigation
